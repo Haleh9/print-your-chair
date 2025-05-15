@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>Print Your Chair – AR App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Voxel-style pixel font (Minecraft-like) -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
@@ -61,17 +58,11 @@
     @keyframes glowShift {
       0% {
         color: #a8ffcc;
-        text-shadow:
-          0 0 10px #b4fba0,
-          0 0 20px #9fffcb,
-          2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px #b4fba0, 0 0 20px #9fffcb, 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
       100% {
         color: #e0ccff;
-        text-shadow:
-          0 0 10px #b05fff,
-          0 0 20px #c97aff,
-          2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px #b05fff, 0 0 20px #c97aff, 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -104,6 +95,7 @@
       box-shadow: 0 5px 15px rgba(255,255,255,0.15), 0 0 20px rgba(255,255,255,0.1);
       transition: transform 0.3s ease;
       animation: floatShift 1.5s ease-in-out infinite;
+      cursor: pointer;
     }
 
     .cube:hover {
@@ -190,9 +182,9 @@
     </p>
 
     <div class="cube-row">
-      <div class="cube waste">Waste</div>
-      <div class="cube to">To</div>
-      <div class="cube value">Value</div>
+      <div class="cube waste" onmouseenter="playSound('waste-tone.mp3')">Waste</div>
+      <div class="cube to" onmouseenter="playSound('to-tone.mp3')">To</div>
+      <div class="cube value" onmouseenter="playSound('value-tone.mp3')">Value</div>
     </div>
 
     <h2>How It Works</h2>
@@ -204,6 +196,15 @@
       © 2025 Print Your Chair | by Haleh Ghazi | Inspired by Persian Gardens
     </footer>
   </div>
+
+  <!-- JavaScript to play sounds -->
+  <script>
+    function playSound(file) {
+      const sound = new Audio(file);
+      sound.volume = 0.3;
+      sound.play();
+    }
+  </script>
 
 </body>
 </html>
