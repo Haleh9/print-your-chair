@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Print Your Chair – AR App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Voxel-style pixel font (like Minecraft) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -46,21 +50,22 @@
     }
 
     h1 {
-      font-size: 3.2em;
-      margin-bottom: 0.3em;
-      font-weight: 900;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 2.4em;
+      margin-bottom: 0.5em;
       color: #e0ccff;
-      letter-spacing: 1px;
-      transform: perspective(300px) rotateX(5deg);
+      letter-spacing: 2px;
       text-shadow:
-        0 0 10px rgba(208, 140, 255, 0.7),
-        0 0 20px rgba(208, 140, 255, 0.5),
-        2px 2px 2px rgba(0, 0, 0, 0.5),
-        inset 0 0 10px rgba(208, 140, 255, 0.3);
+        0 0 10px #b05fff,
+        0 0 20px #c97aff,
+        0 0 30px #d594ff,
+        0 0 40px #e0ccff,
+        2px 2px 4px rgba(0, 0, 0, 0.5);
+      transform: perspective(300px) rotateX(5deg);
     }
 
     .tagline {
-      font-size: 1.2em;
+      font-size: 1.1em;
       max-width: 700px;
       margin-bottom: 2.5em;
       color: #d0d0d0;
@@ -145,7 +150,8 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.2em;
+        font-size: 1.5em;
+        line-height: 1.4;
       }
 
       .cube {
@@ -167,7 +173,7 @@
   <img class="tree" src="persian-tree.png" alt="Persian Tree" />
 
   <div class="overlay">
-    <h1>Print Your Chair</h1>
+    <h1>PRINT YOUR CHAIR</h1>
     <p class="tagline">
       Turn waste into wonder. Scan discarded items, collect sacred cubes, and build voxel chairs that live in your world — all in augmented reality.
     </p>
