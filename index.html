@@ -5,7 +5,7 @@
   <title>Print Your Chair – AR App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Voxel-style pixel font (like Minecraft) -->
+  <!-- Voxel-style pixel font (Minecraft-like) -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <style>
@@ -53,15 +53,26 @@
       font-family: 'Press Start 2P', monospace;
       font-size: 2.4em;
       margin-bottom: 0.5em;
-      color: #e0ccff;
       letter-spacing: 2px;
-      text-shadow:
-        0 0 10px #b05fff,
-        0 0 20px #c97aff,
-        0 0 30px #d594ff,
-        0 0 40px #e0ccff,
-        2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: glowShift 4s ease-in-out infinite alternate;
       transform: perspective(300px) rotateX(5deg);
+    }
+
+    @keyframes glowShift {
+      0% {
+        color: #a8ffcc;
+        text-shadow:
+          0 0 10px #b4fba0,
+          0 0 20px #9fffcb,
+          2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      100% {
+        color: #e0ccff;
+        text-shadow:
+          0 0 10px #b05fff,
+          0 0 20px #c97aff,
+          2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
     }
 
     .tagline {
