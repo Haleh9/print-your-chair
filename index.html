@@ -1,97 +1,38 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #1e0033, #300055, #004466);
-  color: white;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Print Your Chair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <div class="floating-cups">
+      <img src="coffee-cup.png" class="cup" style="top:10%; left:20%;" />
+      <img src="coffee-cup.png" class="cup" style="top:30%; left:70%;" />
+      <img src="coffee-cup.png" class="cup" style="top:50%; left:40%;" />
+      <img src="coffee-cup.png" class="cup" style="top:70%; left:10%;" />
+      <img src="coffee-cup.png" class="cup" style="top:20%; left:85%;" />
+    </div>
 
-.background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-}
+    <div class="content">
+      <h1>Print Your Chair</h1>
+      <p class="tagline">Turn waste into wonder. Scan discarded items, collect sacred cubes, and build voxel chairs that live in your world – all in augmented reality.</p>
+      
+      <div class="cube-row">
+        <div class="glow-cube">Was<br>te</div>
+        <div class="glow-cube">To</div>
+        <div class="glow-cube">Val<br>ue</div>
+      </div>
 
-.floating-cups img {
-  position: absolute;
-  width: 50px;
-  animation: float 10s infinite ease-in-out;
-}
+      <h2>How It Works</h2>
+      <p class="description">
+        With every scanned piece of waste, you earn cubes – small sacred units of creation. Use the cubes to craft your own furniture and place it into real spaces using AR. It’s education, sustainability, and creativity in one app.
+      </p>
 
-@keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
-  50% { transform: translateY(-30px) rotate(15deg); opacity: 1; }
-  100% { transform: translateY(0px) rotate(-15deg); opacity: 0.8; }
-}
-
-.content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #9bf3f0;
-  text-shadow: 0 0 10px #00f0ff, 0 0 30px #00f0ff;
-}
-
-.tagline {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  font-size: 1.2rem;
-  color: #e6e6e6;
-}
-
-.cube-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 40px auto;
-}
-
-.glow-cube {
-  background: linear-gradient(135deg, #7df9ff, #da70d6);
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00f0ff, 0 0 30px #a84aff;
-  animation: pulse 1.5s infinite ease-in-out;
-  text-align: center;
-  line-height: 1.1;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.95; }
-  50% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.95; }
-}
-
-h2 {
-  color: #c2ff9e;
-  font-size: 1.6rem;
-  margin-top: 30px;
-  text-shadow: 0 0 10px #c2ff9e;
-}
-
-.description {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1rem;
-  color: #e0e0e0;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #aaaaaa;
-}
+      <footer>© 2025 Print Your Chair | by Haleh Ghazi | Inspired by Persian Gardens</footer>
+    </div>
+  </div>
+</body>
+</html>
